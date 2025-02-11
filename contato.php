@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <title>Entre em contato</title>
 </head>
 <body>
+    <a href="index.php">Página Inicial</a>
     <?php
         echo "<h1>Página de contato do site</h1>";
     ?>
