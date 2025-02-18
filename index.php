@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto PWII B</title>
     <link href="bootstrap.min.css" rel="stylesheet" />
+    <style>
+      /*
+      .row{
+        border:2px solid red;
+        padding: 5px;
+      }
+      .row > div {
+        border: 2px solid yellow;
+        padding :50px 0; 
+        text-align:center
+      }
+        */
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -46,7 +59,119 @@
 </nav>
 
 
-<table class="table table-hover table-striped">
+<div class="row">
+       
+      <div class="col-2">
+        
+      </div>
+      <div class="col-8">
+        
+      <div class="card">
+          <div class="card-header">
+              Pesquisar usuaários
+          </div>
+          <div class="card-body">
+
+              <div class="row">
+                  <div class="col-2 offset-2">
+                      <button class="btn btn-success">Cadastrar</button>
+                  </div>
+                  <div class="col-2">
+                    Pesquisar
+                  </div>
+                  <div class="col-3">
+                    
+                    <input class="form-control" />
+                  </div>
+                  <div class="col-1">
+                  <button class="btn btn-primary">Pesquisar</button>
+                  </div>
+
+
+                  <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+</table>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+</div>
+      <div class="col-2">
+
+      </div>
+
+</div>
+
+
+
+
+
+
+
+<?php 
+/*
+<h1>Sistema de Layout</h1>
+<div class="row">
+    <div class="col-12">
+      Consumindo os 12 espaços
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    metade esquerda
+  </div>
+  <div class="col-md-6 col-sm-6 offset-sm-6">
+    metade direita
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4">
+      <ul class="list-group">
+      <li class="list-group-item">Fernando</li>
+      <li class="list-group-item">Vitoria</li>
+      <li class="list-group-item">Matheus</li>
+      <li class="list-group-item">Marli</li>
+      <li class="list-group-item">Daniel</li>
+      <li class="list-group-item">João</li>
+      <li class="list-group-item">Fabiana</li>
+      <li class="list-group-item">Anderson</li>
+      <li class="list-group-item">Faberson</li>
+      <li class="list-group-item">Emerson</li>
+    </ul>
+  </div>
+  <div class="col-4">
+  <table class="table table-hover table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -75,36 +200,81 @@
     </tr>
   </tbody>
 </table>
-
-
-
-
-
-<div class="card">
-  <div class="card-header">
-    <h2>Cadastro de usuários</h2>
   </div>
-  <div class="card-body">
-  
-  <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
+  <div class="col-4">
+    direita
   </div>
 </div>
+
+<div class="row">
+  <div class="col-2">
+    Usando col-2
+  </div>
+  <div class="col-6">
+    <div class="alert alert-success">]
+      Atenção usuario cadastrado com sucesso
+    </div>
+  </div>
+  <div class="col-3">
+    utilizando 3
+  </div>
+  <div class="col-1">
+    1 casa para completar as 12
+  </div>
+</div>
+
+<div class="row">
+  <div class="offset-4 col-4">
+        <div class="card">
+        <div class="card-header">
+          <h2>Cadastro de usuários</h2>
+        </div>
+        <div class="card-body">
+        
+        <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+        </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -153,19 +323,8 @@
     <li><a class="dropdown-item" href="usuario.php">Cadastrar Usuários</a></li>
   </ul>
 </div>
+*/ ?>
 
-<ul class="list-group">
-  <li class="list-group-item">Fernando</li>
-  <li class="list-group-item">Vitoria</li>
-  <li class="list-group-item">Matheus</li>
-  <li class="list-group-item">Marli</li>
-  <li class="list-group-item">Daniel</li>
-  <li class="list-group-item">João</li>
-  <li class="list-group-item">Fabiana</li>
-  <li class="list-group-item">Anderson</li>
-  <li class="list-group-item">Faberson</li>
-  <li class="list-group-item">Emerson</li>
-</ul>
 
     <script src="bootstrap.bundle.min.js"></script>
 </body>
