@@ -42,7 +42,7 @@
   </div>
 </nav>
 
-
+<h1>Array</h1>
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
