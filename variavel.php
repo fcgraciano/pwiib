@@ -109,6 +109,21 @@ Exemplo de declaração de constante:
 ?>
 
 
+<h1>Exercícios</h1>
+
+<ol>
+  <li>Crie 3 variaveis, atribua valor e some os valores.  Imprima na tela </li>
+  <li>Crie 2 variaveis, atribua valor e multiplique os valores. Imprima na tela</li>
+  <li>Crie 3 variáveis, uma para descrição de produto e outras duas para quantidade em estoque e valor de venda, 
+    imprima na tela as informações cocatenadas.
+  </li>
+  <li>
+    Crie uma variável boleana, atribua true ou false e imprima na tela
+  </li>
+  
+</ol>
+
+
 </div> <!-- Fecha container bootstrap -->
 
 <script src="bootstrap.bundle.min.js"></script>
