@@ -41,7 +41,46 @@
     </div>
   </div>
 </nav>
-<h1>Variavel</h1>
+<div class="container">
+  <h1>Variável</h1>
+  <h3>Declaração de Variáveis</h3>
+  <p>
+  A declaração de variáveis em PHP é feita utilizando o símbolo de cifrão ($) antes do nome da variável. O nome da variável deve começar com uma letra ou um underscore (_), seguido por letras, números ou underscores. As variáveis em PHP são dinâmicas, ou seja, não é necessário declarar o tipo da variável antes de usá-la. O valor da variável pode ser alterado ao longo da execução do código.
+  </p>
+  Exemplo de declaração de variável:
+ 
+
+  <pre>
+      $nome = "João";  // variável do tipo string
+      $idade = 25;     // variável do tipo inteiro
+      $altura = 1.75;   // variável do tipo float
+  </pre>
+
+  <?php 
+
+   
+
+    $nome = "Fernando";
+    $idade = 34;
+    $peso = 79.500;
+    $altura = 1.77;
+    $isProf = true;
+
+    $namorada = false;
+    $salario = 5000.50;
+
+    echo "<h1>$salario</h1>";
+
+    $numeroTenis = "39";
+
+    echo "$idade +  $peso";
+    
+
+  ?>
+
+ 
+
+</div> <!-- Fecha container bootstrap -->
 
 <script src="bootstrap.bundle.min.js"></script>
 </body>
