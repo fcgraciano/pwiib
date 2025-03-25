@@ -7,14 +7,17 @@
 </head>
 <body>
 <?php 
-if(  isset($_POST["nome"])  )
-{
+
+
     echo "<h1>Existe o post $_POST[nome]</h1>";
-}
+
+
+    echo "Existe o GET => $_GET[nome]";
+
 ?>
-<form action="desafio.php" method="post">
+<form action="variavel.php" method="post">
 <label>Meu nome:</label>
-<input name="nome" />
+<input name="nome" value="" />
 <button type="submit">
     Enviar
 </button>
