@@ -146,9 +146,4 @@ for ($i=0 ; $i < 15 ; $i++  )
 
 
 
-
-
-
-<script src="bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php include "rodape.php"; ?>
