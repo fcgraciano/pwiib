@@ -10,22 +10,25 @@ $sql = "CREATE TABLE IF NOT EXISTS USUARIOS (
         )";
 
 
-if ($conexao->query($sql) === TRUE) {
+if ($conexao->query($sql)) {
     echo "Tabela criada com sucesso.<br>";
 } else {
     echo "Erro ao criar a tabela: " . $conexao->error . "<br>";
 }
 
+
+//////////////////////////// BLOCO PARA INSERIR USUARIO////////////////////////////
 // Inserindo uma linha na tabela
-$sql_insert = "INSERT INTO USUARIOS (LOGIN, SENHA)
-        VALUES ('ADMIN','123');";
+$sql_insert = "INSERT INTO USUARIOS (LOGIN, SENHA) VALUES ('ADMIN','123');";
+
 
 // Executando a inserção
-if ($conexao->query($sql_insert) === TRUE) {
+if ($conexao->query($sql_insert)) {
     echo "Nova linha inserida com sucesso.<br>";
 } else {
     echo "Erro ao inserir dados: " . $conexao->error . "<br>";
 }
+///////////////////////////FIM DO BLOCO PARA INSERIR USUARIO///////////////////////
 
 // Fechando a conexão
 $conexao->close();

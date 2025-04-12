@@ -62,9 +62,13 @@
             <li><a class="dropdown-item" href="switch.php">Switch</a></li>
             <li><a class="dropdown-item" href="array.php">Array/Vetor</a></li>
           </ul>
+        </li><!--Fim do menu dropdonw -->
+        <li class="nav-item">
+            <a class="nav-link" href="instalar.php" > 
+              Instalar o banco 
+            </a>
         </li>
-       
-      </ul>
+      </ul><!--Fim do menu  -->
      
     </div>
   </div>
