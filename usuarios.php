@@ -26,7 +26,7 @@
             <div class="card-body">
               <div class="row">
                     <div class="col-4">
-                        <a class="btn btn-success">
+                        <a href="novo_usuario.php" class="btn btn-success">
                             Novo usuário
                         </a>
                     </div>
@@ -55,9 +55,9 @@
                             // vindos do banco em formato de array chave valor
                             foreach ($usuarios as $user) {
                                 echo "<tr>
-                                        <td>$user[ID]</td>
-                                        <td>$user[LOGIN]</td>
-                                        <td>$user[ATIVO]</td>
+                                        <td>".$user['ID']."</td>
+                                        <td>".$user['LOGIN']."</td>
+                                        <td>".$user['ATIVO']."</td>
                                         <td></td> 
                                       </tr>";
                             }

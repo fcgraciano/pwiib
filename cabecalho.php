@@ -55,7 +55,7 @@
             php
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="variavel.php">Variável</a></li>
+            <li><a class="dropdown-item" href="professores.php">Professores</a></li>
             <li><a class="dropdown-item" href="if.php">If</a></li>
             <li><a class="dropdown-item" href="while.php">While</a></li>
             <li><a class="dropdown-item" href="for.php">For</a></li>
