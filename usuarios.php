@@ -61,7 +61,8 @@
                                         <td>
                                             <a class='btn btn-danger'
                                                  href='excluir_usuario.php?id=".$user['ID']."'>Excluir</a>
-
+                                            <a class='btn btn-warning'
+                                                 href='editar_usuario.php?id=".$user['ID']."'>Editar</a>
                                         </td> 
                                       </tr>";
                             }
