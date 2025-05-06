@@ -37,4 +37,13 @@ class UsuarioRepository {
                 $stmt->bind_param("ssi", $login,$senha,$ativo);
                 $stmt->execute();
     }
+
+    public function excluirUsuario($id)
+    {
+        $sql = "DELETE FROM usuarios where id = ?";
+        $preparar = $this->conexao->prepare($sql);
+        $preparar->bind_param("i",$id);
+        $preparar->execute();
+    }
+
 }
