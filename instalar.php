@@ -9,17 +9,17 @@ $sql = "CREATE TABLE IF NOT EXISTS USUARIOS (
             ATIVO BIT DEFAULT 1
         );";
 $conexao->query($sql); $sql=
-        "CREATE TABLE REFERENCIAS (
+        "CREATE TABLE IF NOT EXISTS REFERENCIAS (
             ID INT PRIMARY KEY AUTO_INCREMENT,
             NOME VARCHAR(100) NOT NULL
         );"
 ;$conexao->query($sql); $sql=
-        "CREATE TABLE DISCIPLINAS(
+        "CREATE TABLE IF NOT EXISTS DISCIPLINAS(
             ID INT PRIMARY KEY AUTO_INCREMENT,
             DISCIPLINA VARCHAR(100)        
         );"
 ;$conexao->query($sql); $sql=
-        "CREATE TABLE PERGUNTAS(
+        "CREATE TABLE IF NOT EXISTS PERGUNTAS(
             ID INT PRIMARY KEY AUTO_INCREMENT,
             PERGUNTA TEXT NOT NULL,
             ID_DISCIPLINA INT,
@@ -27,7 +27,7 @@ $conexao->query($sql); $sql=
                 REFERENCES DISCIPLINAS(ID)
         );"
 ;$conexao->query($sql); $sql=
-        "CREATE TABLE ALTERNATIVAS(
+        "CREATE TABLE IF NOT EXISTS ALTERNATIVAS(
             ID INT PRIMARY KEY AUTO_INCREMENT,
             ID_PERGUNTA INT,
             CORRETA BIT,
@@ -36,7 +36,7 @@ $conexao->query($sql); $sql=
                 REFERENCES PERGUNTAS(ID)
         );"
 ;$conexao->query($sql); $sql=
-        "CREATE TABLE REF_PERGUNTAS(
+        "CREATE TABLE IF NOT EXISTS REF_PERGUNTAS(
             ID INT PRIMARY KEY AUTO_INCREMENT,
             ID_PERGUNTA INT,
             ID_REF INT,
@@ -70,7 +70,6 @@ $sql_insert = "INSERT INTO USUARIOS (LOGIN, SENHA) VALUES
     ('YURI RAFAEL DA SILVA SANTO', '123senha')
     ;";
 
-
 // Executando a inserção
 if ($conexao->query($sql_insert)) {
     echo "Nova linha inserida com sucesso.<br>";
@@ -78,12 +77,6 @@ if ($conexao->query($sql_insert)) {
     echo "Erro ao inserir dados: " . $conexao->error . "<br>";
 }
 ///////////////////////////FIM DO BLOCO PARA INSERIR USUARIO///////////////////////
-
 // Fechando a conexão
 $conexao->close();
-
-
-
-
-
 ?>

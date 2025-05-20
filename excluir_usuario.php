@@ -1,6 +1,6 @@
 <?php
 include "conexao.php";
-require_once "UsuarioRepository.php";
+require_once "repository/UsuarioRepository.php";
 $repo = new UsuarioRepository($conexao);
 
 if( isset($_GET["id"]) && !empty($_GET["id"]) )

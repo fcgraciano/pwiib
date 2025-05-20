@@ -1,7 +1,7 @@
 <?php
 
 include "conexao.php";
-require_once "UsuarioRepository.php";
+require_once "repository/UsuarioRepository.php";
 $repo = new UsuarioRepository($conexao);
 
 

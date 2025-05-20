@@ -1,21 +1,21 @@
 <?php
     include "cabecalho.php"; 
     include "conexao.php";
-    require_once 'repository/UsuarioRepository.php';
+    require_once 'repository/DisciplinaRepository.php';
 
-    //Crio um objeto do tipo UsuarioRepository chamado repo
+    //Crio um objeto do tipo DisciplinaRepository chamado repo
     //E recebe a conexão como parametro
-    $repo = new UsuarioRepository($conexao);
+    $repo = new DisciplinaRepository($conexao);
 
     if( isset($_GET['busca']) && !empty($_GET['busca']) )
     {
-        $usuarios = $repo->Pesquisar( $_GET['busca'] )
+        $obj = $repo->Pesquisar( $_GET['busca'] )
     }
     else
     {
         //Chamei o metodo BuscarTodos para puxar 
         // todos usuarios do banco de dados
-        $usuarios = $repo->buscarTodos();
+        $obj = $repo->buscarTodos();
     }
     
 
@@ -25,14 +25,14 @@
         <br />
         <div class="card">
             <div class="card-header">
-                <b>Lista de usuários</b>
+                <b>Lista de disciplinas</b>
             </div>
             <div class="card-body">
-             <form action="usuarios.php" method="get">
+             <form action="disciplinas.php" method="get">
                 <div class="row">
                         <div class="col-4">
-                            <a href="novo_usuario.php" class="btn btn-success">
-                            Novo usuário
+                            <a href="disciplina_novo.php" class="btn btn-success">
+                                Novo
                             </a>
                         </div>
                         <div class="col-4">
@@ -51,25 +51,22 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Login</th>
-                            <th>Ativo</th>
+                            <th>Nome</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            //foreach serve para ler todos os usuarios 
-                            // vindos do banco em formato de array chave valor
-                            foreach ($usuarios as $user) {
+                           
+                            foreach ($obj as $row) {
                                 echo "<tr>
-                                        <td>".$user['ID']."</td>
-                                        <td>".$user['LOGIN']."</td>
-                                        <td>".$user['ATIVO']."</td>
+                                        <td>".$row['id']."</td>
+                                        <td>".$row['nome']."</td>
                                         <td>
                                             <a class='btn btn-danger'
-                                                 href='excluir_usuario.php?id=".$user['ID']."'>Excluir</a>
+                                                 href='disciplina_excluir.php?id=".$row['id']."'>Excluir</a>
                                             <a class='btn btn-warning'
-                                                 href='editar_usuario.php?id=".$user['ID']."'>Editar</a>
+                                                 href='disciplina_editar.php?id=".$row['id']."'>Editar</a>
                                         </td> 
                                       </tr>";
                             }
@@ -79,12 +76,8 @@
               </div>
             </div>
         </div>
-
     </div>
 </div>
-
-
-
 <?php
 
     include "rodape.php"; 
