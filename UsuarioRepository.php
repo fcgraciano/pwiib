@@ -38,6 +38,18 @@ class UsuarioRepository {
         $resultado = $stmt->get_result();
         return $resultado->fetch_assoc();
     }
+
+    public function verificarLogin($login, $senha) {
+        $stmt = $this->conexao->prepare(
+            "SELECT * FROM usuarios WHERE Login = ? && Senha = ?");
+        $stmt->bind_param("ss", $login, $senha);
+        $stmt->execute();
+
+        $resultado = $stmt->get_result();
+        return $resultado->fetch_assoc();
+    }
+
+
     public function Inserir($login, $senha, $ativo)
     {
         echo $ativo;
