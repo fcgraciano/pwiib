@@ -9,7 +9,7 @@
 
     if( isset($_GET['busca']) && !empty($_GET['busca']) )
     {
-        $obj = $repo->Pesquisar( $_GET['busca'] )
+        $obj = $repo->Pesquisar( $_GET['busca'] );
     }
     else
     {
@@ -60,13 +60,13 @@
                            
                             foreach ($obj as $row) {
                                 echo "<tr>
-                                        <td>".$row['id']."</td>
-                                        <td>".$row['nome']."</td>
+                                        <td>".$row['ID']."</td>
+                                        <td>".$row['DISCIPLINA']."</td>
                                         <td>
                                             <a class='btn btn-danger'
-                                                 href='disciplina_excluir.php?id=".$row['id']."'>Excluir</a>
+                                                 href='disciplina_excluir.php?id=".$row['ID']."'>Excluir</a>
                                             <a class='btn btn-warning'
-                                                 href='disciplina_editar.php?id=".$row['id']."'>Editar</a>
+                                                 href='disciplina_editar.php?id=".$row['ID']."'>Editar</a>
                                         </td> 
                                       </tr>";
                             }

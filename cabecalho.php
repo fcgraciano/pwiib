@@ -49,10 +49,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        <li class="nav-item">
-            <a class="nav-link" href="https://www.globo.com" > Acesse a Globo por aqui </a>
+            <a class="nav-link text-white" href="https://www.globo.com" > Acesse a Globo por aqui </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             php
           </a>
           <ul class="dropdown-menu">
@@ -65,14 +65,20 @@
           </ul>
         </li><!--Fim do menu dropdonw -->
         <li class="nav-item">
-            <a class="nav-link" href="instalar.php" > 
+            <a class="nav-link text-white" href="instalar.php" > 
               Instalar o banco 
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="usuarios.php" > 
+            <a class="nav-link text-white" href="usuarios.php" > 
               Usuarios
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-white" href="disciplinas.php" > 
+              Disciplinas
             </a>
         </li>
       </ul><!--Fim do menu  -->

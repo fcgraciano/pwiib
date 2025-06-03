@@ -10,7 +10,7 @@ if(   isset($_POST["Senha"]) && empty($_POST["Senha"]) == false )
     echo "<br>a Senha é:".$_POST["Senha"];
 }
 include "conexao.php";
-require_once "UsuarioRepository.php";
+require_once "repository/UsuarioRepository.php";
 
 $repo = new UsuarioRepository($conexao);
 

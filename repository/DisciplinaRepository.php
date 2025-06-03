@@ -12,7 +12,7 @@ class DisciplinaRepository {
             "SELECT * FROM disciplinas");
 
         $obj = [];
-        while ($row = $result->fetch_assoc()) {
+        while ($row = $resultado->fetch_assoc()) {
             array_push($obj, $row);
         }
         return $obj;
@@ -40,11 +40,11 @@ class DisciplinaRepository {
     }
     public function Inserir($DISCIPLINA)
     {
-        $sql = "INSERT INTO disciplinas (DISCIPLINA) 
-                VALUES (?)";
+        $sql = "INSERT INTO disciplinas (DISCIPLINA) VALUES (?)";
                 $stmt = $this->conexao->prepare($sql);
                 $stmt->bind_param("s", $DISCIPLINA);
                 $stmt->execute();
+               
     }
 
     public function Editar($DISCIPLINA, $id)

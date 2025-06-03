@@ -21,7 +21,7 @@ else
                 <form action="disciplina_salvar_edicao.php" method="post">
                     <label>Id</label>
                     <input type="text"
-                            value="<?php echo $obj['id'] ?>"
+                            value="<?php echo $obj['ID'] ?>"
                             class="form-control"
                             name="id"
                             readonly 
@@ -29,7 +29,7 @@ else
                     <br />
                     <label>Nome</label>
                     <input type="text"
-                            value="<?php echo $obj['nome'] ?>"
+                            value="<?php echo $obj['DISCIPLINA'] ?>"
                             class="form-control"
                             name="nome"
                              />
