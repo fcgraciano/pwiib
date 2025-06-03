@@ -1,4 +1,5 @@
-<?php
+<?php 
+
     include "cabecalho.php"; 
     include "conexao.php";
     require_once 'repository/UsuarioRepository.php';
@@ -9,7 +10,7 @@
 
     if( isset($_GET['busca']) && !empty($_GET['busca']) )
     {
-        $usuarios = $repo->Pesquisar( $_GET['busca'] )
+        $usuarios = $repo->Pesquisar( $_GET['busca'] );
     }
     else
     {
