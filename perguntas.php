@@ -69,7 +69,7 @@
                                         <td>".$row['ID_DISCIPLINA']."</td>
                                         <td>
                                          <a class='btn btn-primary'
-                                                 href='pergunta_add_alternativa.php?id=".$row['ID']."'>Alternativas</a>
+                                                 href='alternativa_novo.php?id=".$row['ID']."'>Alternativas</a>
                                             <a class='btn btn-danger'
                                                  href='pergunta_excluir.php?id=".$row['ID']."'>Excluir</a>
                                             <a class='btn btn-warning'
